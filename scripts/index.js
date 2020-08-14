@@ -45,10 +45,11 @@ for (i=0; i<100; i++) {
 		var move = moves[0];
 		//setTimeout(function() {board.move(convertVerbose(move))}, 250);
 		board.move(convertVerbose(move));
+		pgn = chess.pgn();
 		chess.move(move);
-		pgn += move.san;
+		// pgn += move.san;
 		pgnContainer.innerHTML = '<p>' + pgn + '</p>';
-		}, 250*i);
+		}, 300*i);
 }
 
 // pgnContainer.innerHTML = '<p>' + pgn + '</p>';
