@@ -27,7 +27,8 @@ function makeRandomMove() {
 	board.move(convertVerbose(move));
 	pgn = chess.pgn();
 	chess.move(move);
-	pgnContainer.innerHTML = '<p>' + pgn + '</p>';
+	$('#pgnContainer').text(pgn);
+	// pgnContainer.innerHTML = '<p>' + pgn + '</p>';
 	
 	if (chess.game_over()) {
 		return;
@@ -50,6 +51,33 @@ var chess = new Chess();
 // var moves = chess.moves();
 var pgn = '';
 // console.log(moves);
-var pgnContainer = document.getElementById('pgnContainer');
+// var pgnContainer = document.getElementById('pgnContainer');
 
 makeRandomMove();
+// for (i=0; i<200; i++) {
+	// setTimeout(makeRandomMove, 300 * i);
+// }
+// var i=1; // ply counter
+// while (!chess.game_over()) {
+	// setTimeout(makeRandomMove, 300 * i);
+	// i++;
+// }
+
+// for (i=0; i<100; i++) {
+	// setTimeout(function() {
+		// var moves = getMoves();
+		// var move = moves[0];
+		// board.move(convertVerbose(move));
+		// pgn = chess.pgn();
+		// chess.move(move);
+		// pgnContainer.innerHTML = '<p>' + pgn + '</p>';
+		// }, 300*i);
+// }
+
+// pgnContainer.innerHTML = '<p>' + pgn + '</p>';
+// game.move('b4');
+// console.log(pgn.innerHTML);
+// document.getElementById('pgn').innerHTML = moves[0];
+// pgnContainer.innerHTML = '<p>' + moves + '</p>';
+// alert(moves[0]);
+
