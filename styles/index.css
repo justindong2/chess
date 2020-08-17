@@ -1,7 +1,16 @@
 body {
 	background-color: lightgrey;
+	font-family: Calibri;
 }
 
 div {
 	margin: auto;
+}
+
+#game {
+	width: 400px;
+}
+
+#pgnContainer {
+	width: 600px;
 }
